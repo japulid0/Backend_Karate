@@ -1,0 +1,534 @@
+ID_CP;Descripcion;Requerimiento;Test Suite;Escenario;Detalle del CP;Resultado Esperado
+CP_001;Check the service Post Create Method;Automatizacion de Api;Automatizacion Prueba;1;Abrir Postman, elegir el metodo Post e Ingresar el Endpoint https://reqres.in/api/users ;El usurario podra realizar las acciones sin inconveniente.
+;;;;2;"Ingresar en el Body el siguiente request: {""name"": ""morpheus"",""job"": ""leader""}";El usurio podra ingresar el request sin inconveniente.
+;;;;3;Enviar la peticion mediante el boton Send y validar que el sistema responsa con un codigo 201;"La peticion debera responder con el siguiente Json {""name"": ""morpheus"", ""job"": ""leader"", ""id"": ""969"", ""createdAt"": ""2024-05-14T20:59:50.423Z""}"
+;;;;4;Mediante la aplicación Intellij generar un nuevo proyecto con el nombre de Automatizacion y en el campo built system seleccionar Maven.;El usuario podra crear el nuevo proyecto sin problema.
+;;;;5;Dar click en el boton crear para que Intellij genere el nuevo proyecto.;El sistema debera generar el nuevo proyecto sin inconveniente incluyendo las carpetas .idea, src y pom.
+;;;;6;En el pom adicionar las dependencias que se van a tener en el proyecto;El usuario adicionara las dependencias sin inconveniete.
+;;;;7;Eliminar la subcarpeta main ya que no se necesitara en el proyecto.;El usuario podra eliminar la carpeta sin inconveniente.
+;;;;8;Añadir un subpackage a la carpeta de Java con el nombre de Backend.;EL usuario podra crear el package sin inconveniente.
+;;;;9;En la carpeta de test dar click derecho y crear un nuevo directory de tipo resource.;El usuario podra crear el directorio sin problema.
+;;;;10;En la carpeta de resources dar click derecho, new directory y asignar el nombre de Backend.;El usuario pordra crear el directorio sin problema.
+;;;;11;Dentro de la carpeta de reousrces generar un archivo con el nombre de karate-config.js.;El usuario podra generar el archivo sin inconveniente.
+;;;;12;Dentro de la carpeta de resourrces generar un archivo con el nombre de karate-properties.json;El usuario podra generar el archivo sin inconveniente.
+;;;;13;Seleccionar el pom y despues del properties poner las dependencias del proyecto.;El usuario podra adicionar las dependencias sin onconveniente.
+;;;;14;Se realiza el cargue de las dependencias mediante la M de maven ubicada en la parte derecha y se le da en reload.;El sistema realizara el proceso de cargue de dependencias.
+;;;;15;Se realiza el proceso de descarga de sorurces y documentation ingresando nuevamente a la M de maven, seleccionar el icono de descarga dowload source el cual desplega 3 opciones, elegir la que dice dowload sources and documentation. ;El sistema debera descargar la informacion sin problema.
+;;;;16;Realizar creacion de la Feature con el nombre de user dando click derecho sobre la carpeta de Backend de Resources, new File.feature;El sistema permitira al usuario crear el archivo sin inconveniente.
+;;;;17;Se redacta la primera Fetarue indicando el escenario principal en este caso Feature: Service Users;El usuario redacta el User sin onconveneinte.
+;;;;18;Se detalla la HU As QA Automation  I want to consult a user - to validate the status code and response;El usuario detalla la HU sin inconveniente.
+;;;;19;Ingresar la precondicion del servicio mediante la sentencia Background: consume service.;El usuario podra adicionar la precondicion sin inconveniente.
+;;;;20;Definir variable mediante la sentencia *url (palabra reservada de Karate) y seguido indicamos la variable url;
+;;;;21;Realizar funcion en karate.config para que realice el llamado al karate-properties que es el jadon sonde estara toda la data.;El usuario podra realizar las acciones sin problema.
+;;;;22;"Realizar Json en el archivo karate - properties.json { ""dev"": {   ""url"": ""https://reqres.in/"",   ""name"": ""morpheus"",   ""job"": ""leader""}
+}";El usuario podra definir el Json sin inconveniente.
+;;;;23;"Ingresar al User.feature y generar el escenario Check the service Post Method usando las palabras reservadas de Gherkin.* def requestUser = { ""name"": '#(name)',""job"": '#(job)'}     * def responsePost = read('responsePost.json') Given path 'api', 'users' And request requestUser  When method post
+    Then status 201";El usuario genera el escenario sin problema.
+;;;;24;En la carpeta Backend que esta debajo de la de  java dar click derecho y generar un nueva clase java con el nombre de user.;El sistema debe permitir crear la clase sin problema.
+;;;;25;"Dentro de la clase de Java realizar la siguiente configuracion: package Backend; import com.intuit.karate.junit5.Karate;import com.intuit.karate.junit5.Karate.Test;
+
+public class user {
+    @Test
+    Karate testSample(){
+        return Karate.run(""classpath:Backend/user.feature"").relativeTo(getClass());
+
+    }";
+;;;;26;Realilzar ejecucion de la feature dando click derecho sobre la clase java y eligiendo la opcion Run.;Se espera que el sistema no genere ningun tipo de error y se puede ver el caso automatizado.
+;;;;27;Ingresar a la carpeta target, identificar la seccion karate summary.html dar click derecho, open in y elegir browser google chrome.;El sistema redireccionara al usuario a Karate Labs y podra ver el caso automatizado sin inconveniente.
+CP_002;Check the service Post Method Unsuccessful;Automatizacion de Api;Automatizacion Prueba;1;Abrir Postman, elegir el metodo Post e Ingresar el Endpoint https://reqres.in/api con la finalidad de generar el error 404. ;El usurario podra realizar las acciones sin inconveniente.
+;;;;2;"Ingresar en el Body el siguiente request: {""name"": ""morpheus"",""job"": ""leader""}";El usurio podra ingresar el request sin inconveniente.
+;;;;3;Enviar la peticion mediante el boton Send y validar que el sistema responsa con un codigo 404.;La peticion debera responder con el siguiente error 404 Not Found.
+;;;;4;Mediante la aplicación Intellij generar un nuevo proyecto con el nombre de Automatizacion y en el campo built system seleccionar Maven.;El usuario podra crear el nuevo proyecto sin problema.
+;;;;5;Dar click en el boton crear para que Intellij genere el nuevo proyecto.;El sistema debera generar el nuevo proyecto sin inconveniente incluyendo las carpetas .idea, src y pom.
+;;;;6;En el pom adicionar las dependencias que se van a tener en el proyecto;El usuario adicionara las dependencias sin inconveniete.
+;;;;7;Eliminar la subcarpeta main ya que no se necesitara en el proyecto.;El usuario podra eliminar la carpeta sin inconveniente.
+;;;;8;Añadir un subpackage a la carpeta de Java con el nombre de Backend.;EL usuario podra crear el package sin inconveniente.
+;;;;9;En la carpeta de test dar click derecho y crear un nuevo directory de tipo resource.;El usuario podra crear el directorio sin problema.
+;;;;10;En la carpeta de resources dar click derecho, new directory y asignar el nombre de Backend.;El usuario pordra crear el directorio sin problema.
+;;;;11;Dentro de la carpeta de reousrces generar un archivo con el nombre de karate-config.js.;El usuario podra generar el archivo sin inconveniente.
+;;;;12;Dentro de la carpeta de resourrces generar un archivo con el nombre de karate-properties.json;El usuario podra generar el archivo sin inconveniente.
+;;;;13;Seleccionar el pom y despues del properties poner las dependencias del proyecto.;El usuario podra adicionar las dependencias sin onconveniente.
+;;;;14;Se realiza el cargue de las dependencias mediante la M de maven ubicada en la parte derecha y se le da en reload.;El sistema realizara el proceso de cargue de dependencias.
+;;;;15;Se realiza el proceso de descarga de sorurces y documentation ingresando nuevamente a la M de maven, seleccionar el icono de descarga dowload source el cual desplega 3 opciones, elegir la que dice dowload sources and documentation. ;El sistema debera descargar la informacion sin problema.
+;;;;16;Realizar creacion de la Feature con el nombre de user dando click derecho sobre la carpeta de Backend de Resources, new File.feature;El sistema permitira al usuario crear el archivo sin inconveniente.
+;;;;17;Se redacta la primera Fetarue indicando el escenario principal en este caso Feature: Service Users;El usuario redacta el User sin onconveneinte.
+;;;;18;Se detalla la HU As QA Automation  I want to consult a user - to validate the status code and response;El usuario detalla la HU sin inconveniente.
+;;;;19;Ingresar la precondicion del servicio mediante la sentencia Background: consume service.;El usuario podra adicionar la precondicion sin inconveniente.
+;;;;20;Definir variable mediante la sentencia *url (palabra reservada de Karate) y seguido indicamos la variable url;
+;;;;21;Realizar funcion en karate.config para que realice el llamado al karate-properties que es el jadon sonde estara toda la data.;El usuario podra realizar las acciones sin problema.
+;;;;22;"Realizar Json en el archivo karate - properties.json { ""dev"": {   ""url"": ""https://reqres.in/"",   ""name"": ""morpheus"",   ""job"": ""leader""}
+}";El usuario podra definir el Json sin inconveniente.
+;;;;23;"Ingresar al User.feature y generar el escenario Check the service Post Method usando las palabras reservadas de Gherkin.* def requestUser = { ""name"": '#(name)',""job"": '#(job)'}     * def responsePost = read('responsePost.json') Given path 'api',  And request requestUser  When method post
+    Then status 404 And match response == responsePost";El usuario genera el escenario sin problema.
+;;;;24;En la carpeta Backend que esta debajo de la de  java dar click derecho y generar un nueva clase java con el nombre de user.;El sistema debe permitir crear la clase sin problema.
+;;;;25;"Dentro de la clase de Java realizar la siguiente configuracion: package Backend; import com.intuit.karate.junit5.Karate;import com.intuit.karate.junit5.Karate.Test;
+
+public class user {
+    @Test
+    Karate testSample(){
+        return Karate.run(""classpath:Backend/user.feature"").relativeTo(getClass());
+
+    }";
+;;;;26;Realilzar ejecucion de la feature dando click derecho sobre la clase java y eligiendo la opcion Run.;Se espera que el sistema  genere error ya que no se encuentra correctamente confidurado el enpoint en el given y por esta razon debe generar error 404.
+;;;;27;Ingresar a la carpeta target, identificar la seccion karate summary.html dar click derecho, open in y elegir browser google chrome.;El sistema redireccionara al usuario a Karate Labs y podra ver el caso con error lo cual es correcto.
+CP_003;Check the service Get Method;Automatizacion de Api;Automatizacion Prueba;1;Abrir Postman, elegir el metodo Post e Ingresar el Endpoint https://reqres.in/api/users?page=2;El usurario podra realizar las acciones sin inconveniente.
+;;;;2;Enviar la peticion mediante el boton Send y validar que el sistema responda con un codigo 200;"La peticion debera responder con el siguiente Json{
+    ""page"": 2,
+    ""per_page"": 6,
+    ""total"": 12,
+    ""total_pages"": 2,
+    ""data"": [
+        {
+            ""id"": 7,
+            ""email"": ""michael.lawson@reqres.in"",
+            ""first_name"": ""Michael"",
+            ""last_name"": ""Lawson"",
+            ""avatar"": ""https://reqres.in/img/faces/7-image.jpg""
+        },
+        {
+            ""id"": 8,
+            ""email"": ""lindsay.ferguson@reqres.in"",
+            ""first_name"": ""Lindsay"",
+            ""last_name"": ""Ferguson"",
+            ""avatar"": ""https://reqres.in/img/faces/8-image.jpg""
+        },
+        {
+            ""id"": 9,
+            ""email"": ""tobias.funke@reqres.in"",
+            ""first_name"": ""Tobias"",
+            ""last_name"": ""Funke"",
+            ""avatar"": ""https://reqres.in/img/faces/9-image.jpg""
+        },
+        {
+            ""id"": 10,
+            ""email"": ""byron.fields@reqres.in"",
+            ""first_name"": ""Byron"",
+            ""last_name"": ""Fields"",
+            ""avatar"": ""https://reqres.in/img/faces/10-image.jpg""
+        },
+        {
+            ""id"": 11,
+            ""email"": ""george.edwards@reqres.in"",
+            ""first_name"": ""George"",
+            ""last_name"": ""Edwards"",
+            ""avatar"": ""https://reqres.in/img/faces/11-image.jpg""
+        },
+        {
+            ""id"": 12,
+            ""email"": ""rachel.howell@reqres.in"",
+            ""first_name"": ""Rachel"",
+            ""last_name"": ""Howell"",
+            ""avatar"": ""https://reqres.in/img/faces/12-image.jpg""
+        }
+    ],
+    ""support"": {
+        ""url"": ""https://reqres.in/#support-heading"",
+        ""text"": ""To keep ReqRes free, contributions towards server costs are appreciated!""
+    }
+}"
+;;;;3;Mediante la aplicación Intellij generar un nuevo proyecto con el nombre de Automatizacion y en el campo built system seleccionar Maven.;El usuario podra crear el nuevo proyecto sin problema.
+;;;;4;Dar click en el boton crear para que Intellij genere el nuevo proyecto.;El sistema debera generar el nuevo proyecto sin inconveniente incluyendo las carpetas .idea, src y pom.
+;;;;5;En el pom adicionar las dependencias que se van a tener en el proyecto;El usuario adicionara las dependencias sin inconveniete.
+;;;;6;Eliminar la subcarpeta main ya que no se necesitara en el proyecto.;El usuario podra eliminar la carpeta sin inconveniente.
+;;;;7;Añadir un subpackage a la carpeta de Java con el nombre de Backend.;EL usuario podra crear el package sin inconveniente.
+;;;;8;En la carpeta de test dar click derecho y crear un nuevo directory de tipo resource.;El usuario podra crear el directorio sin problema.
+;;;;9;En la carpeta de resources dar click derecho, new directory y asignar el nombre de Backend.;El usuario pordra crear el directorio sin problema.
+;;;;10;Dentro de la carpeta de reousrces generar un archivo con el nombre de karate-config.js.;El usuario podra generar el archivo sin inconveniente.
+;;;;11;Dentro de la carpeta de resourrces generar un archivo con el nombre de karate-properties.json;El usuario podra generar el archivo sin inconveniente.
+;;;;12;Seleccionar el pom y despues del properties poner las dependencias del proyecto.;El usuario podra adicionar las dependencias sin onconveniente.
+;;;;13;Se realiza el cargue de las dependencias mediante la M de maven ubicada en la parte derecha y se le da en reload.;El sistema realizara el proceso de cargue de dependencias.
+;;;;14;Se realiza el proceso de descarga de sorurces y documentation ingresando nuevamente a la M de maven, seleccionar el icono de descarga dowload source el cual desplega 3 opciones, elegir la que dice dowload sources and documentation. ;El sistema debera descargar la informacion sin problema.
+;;;;15;Realizar creacion de la Feature con el nombre de user dando click derecho sobre la carpeta de Backend de Resources, new File.feature;El sistema permitira al usuario crear el archivo sin inconveniente.
+;;;;16;Se redacta la primera Fetarue indicando el escenario principal en este caso Feature: Service Users;El usuario redacta el User sin onconveneinte.
+;;;;17;Se detalla la HU As QA Automation  I want to consult a user - to validate the status code and response;El usuario detalla la HU sin inconveniente.
+;;;;18;Ingresar la precondicion del servicio mediante la sentencia Background: consume service.;El usuario podra adicionar la precondicion sin inconveniente.
+;;;;19;Definir variable mediante la sentencia *url (palabra reservada de Karate) y seguido indicamos la variable url;
+;;;;20;Realizar funcion en karate.config para que realice el llamado al karate-properties que es el jadon sonde estara toda la data.;El usuario podra realizar las acciones sin problema.
+;;;;22;"Ingresar al User.feature y generar el escenario Check the service Get Method usando las palabras reservadas de Gherkin.Given path 'api', 'users' When method get
+    Then status 200 And assert response.total == 12";El usuario genera el escenario sin problema.
+;;;;23;En la carpeta Backend que esta debajo de la de  java dar click derecho y generar un nueva clase java con el nombre de user.;El sistema debe permitir crear la clase sin problema.
+;;;;24;"Dentro de la clase de Java realizar la siguiente configuracion: package Backend; import com.intuit.karate.junit5.Karate;import com.intuit.karate.junit5.Karate.Test;
+
+public class user {
+    @Test
+    Karate testSample(){
+        return Karate.run(""classpath:Backend/user.feature"").relativeTo(getClass());
+
+    }";El usuario podra configurar la clase sin inconveniente.
+;;;;25;Realilzar ejecucion de la feature dando click derecho sobre la clase java y eligiendo la opcion Run.;Se espera que el sistema no genere ningun tipo de error y se puede ver el caso automatizado.
+;;;;26;Ingresar a la carpeta target, identificar la seccion karate summary.html dar click derecho, open in y elegir browser google chrome.;El sistema redireccionara al usuario a Karate Labs y podra ver el caso automatizado sin inconveniente.
+CP_004;Check the service Get Method;Automatizacion de Api;Automatizacion Prueba;1;Abrir Postman, elegir el metodo Post e Ingresar el Endpoint https://reqres.in/api/users?page=2;El usurario podra realizar las acciones sin inconveniente.
+;;;;2;Enviar la peticion mediante el boton Send y validar que el sistema responda con un codigo 200;"La peticion debera responder con el siguiente Json{
+    ""page"": 2,
+    ""per_page"": 6,
+    ""total"": 12,
+    ""total_pages"": 2,
+    ""data"": [
+        {
+            ""id"": 7,
+            ""email"": ""michael.lawson@reqres.in"",
+            ""first_name"": ""Michael"",
+            ""last_name"": ""Lawson"",
+            ""avatar"": ""https://reqres.in/img/faces/7-image.jpg""
+        },
+        {
+            ""id"": 8,
+            ""email"": ""lindsay.ferguson@reqres.in"",
+            ""first_name"": ""Lindsay"",
+            ""last_name"": ""Ferguson"",
+            ""avatar"": ""https://reqres.in/img/faces/8-image.jpg""
+        },
+        {
+            ""id"": 9,
+            ""email"": ""tobias.funke@reqres.in"",
+            ""first_name"": ""Tobias"",
+            ""last_name"": ""Funke"",
+            ""avatar"": ""https://reqres.in/img/faces/9-image.jpg""
+        },
+        {
+            ""id"": 10,
+            ""email"": ""byron.fields@reqres.in"",
+            ""first_name"": ""Byron"",
+            ""last_name"": ""Fields"",
+            ""avatar"": ""https://reqres.in/img/faces/10-image.jpg""
+        },
+        {
+            ""id"": 11,
+            ""email"": ""george.edwards@reqres.in"",
+            ""first_name"": ""George"",
+            ""last_name"": ""Edwards"",
+            ""avatar"": ""https://reqres.in/img/faces/11-image.jpg""
+        },
+        {
+            ""id"": 12,
+            ""email"": ""rachel.howell@reqres.in"",
+            ""first_name"": ""Rachel"",
+            ""last_name"": ""Howell"",
+            ""avatar"": ""https://reqres.in/img/faces/12-image.jpg""
+        }
+    ],
+    ""support"": {
+        ""url"": ""https://reqres.in/#support-heading"",
+        ""text"": ""To keep ReqRes free, contributions towards server costs are appreciated!""
+    }
+}"
+;;;;3;Mediante la aplicación Intellij generar un nuevo proyecto con el nombre de Automatizacion y en el campo built system seleccionar Maven.;El usuario podra crear el nuevo proyecto sin problema.
+;;;;4;Dar click en el boton crear para que Intellij genere el nuevo proyecto.;El sistema debera generar el nuevo proyecto sin inconveniente incluyendo las carpetas .idea, src y pom.
+;;;;5;En el pom adicionar las dependencias que se van a tener en el proyecto;El usuario adicionara las dependencias sin inconveniete.
+;;;;6;Eliminar la subcarpeta main ya que no se necesitara en el proyecto.;El usuario podra eliminar la carpeta sin inconveniente.
+;;;;7;Añadir un subpackage a la carpeta de Java con el nombre de Backend.;EL usuario podra crear el package sin inconveniente.
+;;;;8;En la carpeta de test dar click derecho y crear un nuevo directory de tipo resource.;El usuario podra crear el directorio sin problema.
+;;;;9;En la carpeta de resources dar click derecho, new directory y asignar el nombre de Backend.;El usuario pordra crear el directorio sin problema.
+;;;;10;Dentro de la carpeta de reousrces generar un archivo con el nombre de karate-config.js.;El usuario podra generar el archivo sin inconveniente.
+;;;;11;Dentro de la carpeta de resourrces generar un archivo con el nombre de karate-properties.json;El usuario podra generar el archivo sin inconveniente.
+;;;;12;Seleccionar el pom y despues del properties poner las dependencias del proyecto.;El usuario podra adicionar las dependencias sin onconveniente.
+;;;;13;Se realiza el cargue de las dependencias mediante la M de maven ubicada en la parte derecha y se le da en reload.;El sistema realizara el proceso de cargue de dependencias.
+;;;;14;Se realiza el proceso de descarga de sorurces y documentation ingresando nuevamente a la M de maven, seleccionar el icono de descarga dowload source el cual desplega 3 opciones, elegir la que dice dowload sources and documentation. ;El sistema debera descargar la informacion sin problema.
+;;;;15;Realizar creacion de la Feature con el nombre de user dando click derecho sobre la carpeta de Backend de Resources, new File.feature;El sistema permitira al usuario crear el archivo sin inconveniente.
+;;;;16;Se redacta la primera Fetarue indicando el escenario principal en este caso Feature: Service Users;El usuario redacta el User sin onconveneinte.
+;;;;17;Se detalla la HU As QA Automation  I want to consult a user - to validate the status code and response;El usuario detalla la HU sin inconveniente.
+;;;;18;Ingresar la precondicion del servicio mediante la sentencia Background: consume service.;El usuario podra adicionar la precondicion sin inconveniente.
+;;;;19;Definir variable mediante la sentencia *url (palabra reservada de Karate) y seguido indicamos la variable url;
+;;;;20;Realizar funcion en karate.config para que realice el llamado al karate-properties que es el jadon sonde estara toda la data.;El usuario podra realizar las acciones sin problema.
+;;;;22;"Ingresar al User.feature y generar el escenario Check the service Get Method usando las palabras reservadas de Gherkin.Given path 'api', 'users'
+    When method get Then status 400 And assert response.email == 'jarolpr1603@reqres.in'";El usuario genera el escenario sin problema.
+;;;;23;En la carpeta Backend que esta debajo de la de  java dar click derecho y generar un nueva clase java con el nombre de user.;El sistema debe permitir crear la clase sin problema.
+;;;;24;"Dentro de la clase de Java realizar la siguiente configuracion: package Backend; import com.intuit.karate.junit5.Karate;import com.intuit.karate.junit5.Karate.Test;
+
+public class user {
+    @Test
+    Karate testSample(){
+        return Karate.run(""classpath:Backend/user.feature"").relativeTo(getClass());
+
+    }";El usuario podra configurar la clase sin inconveniente.
+;;;;25;Realilzar ejecucion de la feature dando click derecho sobre la clase java y eligiendo la opcion Run.;Se espera que el sistema genere error 400 ya que se le incluyo una validacion de email errado.
+;;;;26;Ingresar a la carpeta target, identificar la seccion karate summary.html dar click derecho, open in y elegir browser google chrome.;El sistema redireccionara al usuario a Karate Labs y podra ver el caso automatizado sin inconveniente con error 400.
+CP_005;Check the service Put Method;Automatizacion de Api;Automatizacion Prueba;1;Abrir Postman, elegir el metodo Post e Ingresar el Endpoint https://reqres.in/api/users/2;El usurario podra realizar las acciones sin inconveniente.
+;;;;2;"Ingresar en el Body el siguiente request: {""name"": ""morpheus"", ""job"": ""zion resident""}";El usurio podra ingresar el request sin inconveniente.
+;;;;3;Enviar la peticion mediante el boton Send y validar que el sistema responda con un codigo 200;"La peticion debera responder con el siguiente Json{
+    ""page"": 2,
+    ""per_page"": 6,
+    ""total"": 12,
+    ""total_pages"": 2,
+    ""data"": [
+        {
+            ""id"": 7,
+            ""email"": ""michael.lawson@reqres.in"",
+            ""first_name"": ""Michael"",
+            ""last_name"": ""Lawson"",
+            ""avatar"": ""https://reqres.in/img/faces/7-image.jpg""
+        },
+        {
+            ""id"": 8,
+            ""email"": ""lindsay.ferguson@reqres.in"",
+            ""first_name"": ""Lindsay"",
+            ""last_name"": ""Ferguson"",
+            ""avatar"": ""https://reqres.in/img/faces/8-image.jpg""
+        },
+        {
+            ""id"": 9,
+            ""email"": ""tobias.funke@reqres.in"",
+            ""first_name"": ""Tobias"",
+            ""last_name"": ""Funke"",
+            ""avatar"": ""https://reqres.in/img/faces/9-image.jpg""
+        },
+        {
+            ""id"": 10,
+            ""email"": ""byron.fields@reqres.in"",
+            ""first_name"": ""Byron"",
+            ""last_name"": ""Fields"",
+            ""avatar"": ""https://reqres.in/img/faces/10-image.jpg""
+        },
+        {
+            ""id"": 11,
+            ""email"": ""george.edwards@reqres.in"",
+            ""first_name"": ""George"",
+            ""last_name"": ""Edwards"",
+            ""avatar"": ""https://reqres.in/img/faces/11-image.jpg""
+        },
+        {
+            ""id"": 12,
+            ""email"": ""rachel.howell@reqres.in"",
+            ""first_name"": ""Rachel"",
+            ""last_name"": ""Howell"",
+            ""avatar"": ""https://reqres.in/img/faces/12-image.jpg""
+        }
+    ],
+    ""support"": {
+        ""url"": ""https://reqres.in/#support-heading"",
+        ""text"": ""To keep ReqRes free, contributions towards server costs are appreciated!""
+    }
+}"
+;;;;4;Mediante la aplicación Intellij generar un nuevo proyecto con el nombre de Automatizacion y en el campo built system seleccionar Maven.;El usuario podra crear el nuevo proyecto sin problema.
+;;;;5;Dar click en el boton crear para que Intellij genere el nuevo proyecto.;El sistema debera generar el nuevo proyecto sin inconveniente incluyendo las carpetas .idea, src y pom.
+;;;;6;En el pom adicionar las dependencias que se van a tener en el proyecto;El usuario adicionara las dependencias sin inconveniete.
+;;;;7;Eliminar la subcarpeta main ya que no se necesitara en el proyecto.;El usuario podra eliminar la carpeta sin inconveniente.
+;;;;8;Añadir un subpackage a la carpeta de Java con el nombre de Backend.;EL usuario podra crear el package sin inconveniente.
+;;;;9;En la carpeta de test dar click derecho y crear un nuevo directory de tipo resource.;El usuario podra crear el directorio sin problema.
+;;;;10;En la carpeta de resources dar click derecho, new directory y asignar el nombre de Backend.;El usuario pordra crear el directorio sin problema.
+;;;;11;Dentro de la carpeta de reousrces generar un archivo con el nombre de karate-config.js.;El usuario podra generar el archivo sin inconveniente.
+;;;;12;Dentro de la carpeta de resourrces generar un archivo con el nombre de karate-properties.json;El usuario podra generar el archivo sin inconveniente.
+;;;;13;Seleccionar el pom y despues del properties poner las dependencias del proyecto.;El usuario podra adicionar las dependencias sin onconveniente.
+;;;;14;Se realiza el cargue de las dependencias mediante la M de maven ubicada en la parte derecha y se le da en reload.;El sistema realizara el proceso de cargue de dependencias.
+;;;;15;Se realiza el proceso de descarga de sorurces y documentation ingresando nuevamente a la M de maven, seleccionar el icono de descarga dowload source el cual desplega 3 opciones, elegir la que dice dowload sources and documentation. ;El sistema debera descargar la informacion sin problema.
+;;;;16;Realizar creacion de la Feature con el nombre de user dando click derecho sobre la carpeta de Backend de Resources, new File.feature;El sistema permitira al usuario crear el archivo sin inconveniente.
+;;;;17;Se redacta la primera Fetarue indicando el escenario principal en este caso Feature: Service Users;El usuario redacta el User sin onconveneinte.
+;;;;18;Se detalla la HU As QA Automation  I want to consult a user - to validate the status code and response;El usuario detalla la HU sin inconveniente.
+;;;;19;Ingresar la precondicion del servicio mediante la sentencia Background: consume service.;El usuario podra adicionar la precondicion sin inconveniente.
+;;;;20;Definir variable mediante la sentencia *url (palabra reservada de Karate) y seguido indicamos la variable url;
+;;;;21;Realizar funcion en karate.config para que realice el llamado al karate-properties que es el jadon sonde estara toda la data.;El usuario podra realizar las acciones sin problema.
+;;;;22;"Ingresar al User.feature y generar el escenario Check the service Get Method usando las palabras reservadas de Gherkin.Given path 'api', 'users', '2' And request {""name"": ""Jarol"", ""job"": ""zion resident""} When method put Then status 200";El usuario genera el escenario sin problema.
+;;;;23;En la carpeta Backend que esta debajo de la de  java dar click derecho y generar un nueva clase java con el nombre de user.;El sistema debe permitir crear la clase sin problema.
+;;;;24;"Dentro de la clase de Java realizar la siguiente configuracion: package Backend; import com.intuit.karate.junit5.Karate;import com.intuit.karate.junit5.Karate.Test;
+
+public class user {
+    @Test
+    Karate testSample(){
+        return Karate.run(""classpath:Backend/user.feature"").relativeTo(getClass());
+
+    }";El usuario podra configurar la clase sin inconveniente.
+;;;;25;Realilzar ejecucion de la feature dando click derecho sobre la clase java y eligiendo la opcion Run.;Se espera que el sistema no genere ningun tipo de error y se puede ver el caso automatizado.
+;;;;26;Ingresar a la carpeta target, identificar la seccion karate summary.html dar click derecho, open in y elegir browser google chrome.;El sistema redireccionara al usuario a Karate Labs y podra ver el caso automatizado sin inconveniente.
+CP_006;Check the service Put Method Unsuccessful;Automatizacion de Api;Automatizacion Prueba;1;Abrir Postman, elegir el metodo Post e Ingresar el Endpoint https://reqres.in/api/users?page=2;El usurario podra realizar las acciones sin inconveniente.
+;;;;2;"Ingresar en el Body el siguiente request: {""name"": ""morpheus"", ""job"": ""zion resident""}";El usurio podra ingresar el request sin inconveniente.
+;;;;3;Enviar la peticion mediante el boton Send y validar que el sistema responda con un codigo 200;"La peticion debera responder con el siguiente Json{
+    ""page"": 2,
+    ""per_page"": 6,
+    ""total"": 12,
+    ""total_pages"": 2,
+    ""data"": [
+        {
+            ""id"": 7,
+            ""email"": ""michael.lawson@reqres.in"",
+            ""first_name"": ""Michael"",
+            ""last_name"": ""Lawson"",
+            ""avatar"": ""https://reqres.in/img/faces/7-image.jpg""
+        },
+        {
+            ""id"": 8,
+            ""email"": ""lindsay.ferguson@reqres.in"",
+            ""first_name"": ""Lindsay"",
+            ""last_name"": ""Ferguson"",
+            ""avatar"": ""https://reqres.in/img/faces/8-image.jpg""
+        },
+        {
+            ""id"": 9,
+            ""email"": ""tobias.funke@reqres.in"",
+            ""first_name"": ""Tobias"",
+            ""last_name"": ""Funke"",
+            ""avatar"": ""https://reqres.in/img/faces/9-image.jpg""
+        },
+        {
+            ""id"": 10,
+            ""email"": ""byron.fields@reqres.in"",
+            ""first_name"": ""Byron"",
+            ""last_name"": ""Fields"",
+            ""avatar"": ""https://reqres.in/img/faces/10-image.jpg""
+        },
+        {
+            ""id"": 11,
+            ""email"": ""george.edwards@reqres.in"",
+            ""first_name"": ""George"",
+            ""last_name"": ""Edwards"",
+            ""avatar"": ""https://reqres.in/img/faces/11-image.jpg""
+        },
+        {
+            ""id"": 12,
+            ""email"": ""rachel.howell@reqres.in"",
+            ""first_name"": ""Rachel"",
+            ""last_name"": ""Howell"",
+            ""avatar"": ""https://reqres.in/img/faces/12-image.jpg""
+        }
+    ],
+    ""support"": {
+        ""url"": ""https://reqres.in/#support-heading"",
+        ""text"": ""To keep ReqRes free, contributions towards server costs are appreciated!""
+    }
+}"
+;;;;4;Mediante la aplicación Intellij generar un nuevo proyecto con el nombre de Automatizacion y en el campo built system seleccionar Maven.;El usuario podra crear el nuevo proyecto sin problema.
+;;;;5;Dar click en el boton crear para que Intellij genere el nuevo proyecto.;El sistema debera generar el nuevo proyecto sin inconveniente incluyendo las carpetas .idea, src y pom.
+;;;;6;En el pom adicionar las dependencias que se van a tener en el proyecto;El usuario adicionara las dependencias sin inconveniete.
+;;;;7;Eliminar la subcarpeta main ya que no se necesitara en el proyecto.;El usuario podra eliminar la carpeta sin inconveniente.
+;;;;8;Añadir un subpackage a la carpeta de Java con el nombre de Backend.;EL usuario podra crear el package sin inconveniente.
+;;;;9;En la carpeta de test dar click derecho y crear un nuevo directory de tipo resource.;El usuario podra crear el directorio sin problema.
+;;;;10;En la carpeta de resources dar click derecho, new directory y asignar el nombre de Backend.;El usuario pordra crear el directorio sin problema.
+;;;;11;Dentro de la carpeta de reousrces generar un archivo con el nombre de karate-config.js.;El usuario podra generar el archivo sin inconveniente.
+;;;;12;Dentro de la carpeta de resourrces generar un archivo con el nombre de karate-properties.json;El usuario podra generar el archivo sin inconveniente.
+;;;;13;Seleccionar el pom y despues del properties poner las dependencias del proyecto.;El usuario podra adicionar las dependencias sin onconveniente.
+;;;;14;Se realiza el cargue de las dependencias mediante la M de maven ubicada en la parte derecha y se le da en reload.;El sistema realizara el proceso de cargue de dependencias.
+;;;;15;Se realiza el proceso de descarga de sorurces y documentation ingresando nuevamente a la M de maven, seleccionar el icono de descarga dowload source el cual desplega 3 opciones, elegir la que dice dowload sources and documentation. ;El sistema debera descargar la informacion sin problema.
+;;;;16;Realizar creacion de la Feature con el nombre de user dando click derecho sobre la carpeta de Backend de Resources, new File.feature;El sistema permitira al usuario crear el archivo sin inconveniente.
+;;;;17;Se redacta la primera Fetarue indicando el escenario principal en este caso Feature: Service Users;El usuario redacta el User sin onconveneinte.
+;;;;18;Se detalla la HU As QA Automation  I want to consult a user - to validate the status code and response;El usuario detalla la HU sin inconveniente.
+;;;;19;Ingresar la precondicion del servicio mediante la sentencia Background: consume service.;El usuario podra adicionar la precondicion sin inconveniente.
+;;;;20;Definir variable mediante la sentencia *url (palabra reservada de Karate) y seguido indicamos la variable url;
+;;;;21;Realizar funcion en karate.config para que realice el llamado al karate-properties que es el jadon sonde estara toda la data.;El usuario podra realizar las acciones sin problema.
+;;;;22;"Ingresar al User.feature y generar el escenario Check the service Get Method usando las palabras reservadas de Gherkin.Given path 'api', 'users', '2' And request {""name"": ""Jarol"", ""job"": ""zion resident""} When method put Then status 400 And assert response.name == '45555543'";El usuario genera el escenario sin problema.
+;;;;23;En la carpeta Backend que esta debajo de la de  java dar click derecho y generar un nueva clase java con el nombre de user.;El sistema debe permitir crear la clase sin problema.
+;;;;24;"Dentro de la clase de Java realizar la siguiente configuracion: package Backend; import com.intuit.karate.junit5.Karate;import com.intuit.karate.junit5.Karate.Test;
+
+public class user {
+    @Test
+    Karate testSample(){
+        return Karate.run(""classpath:Backend/user.feature"").relativeTo(getClass());
+
+    }";El usuario podra configurar la clase sin inconveniente.
+;;;;25;Realilzar ejecucion de la feature dando click derecho sobre la clase java y eligiendo la opcion Run.;Se espera que el sistema genere error 400 ya que se le incluyo una validacion del name errado.
+;;;;26;Ingresar a la carpeta target, identificar la seccion karate summary.html dar click derecho, open in y elegir browser google chrome.;El sistema redireccionara al usuario a Karate Labs y podra ver el caso automatizado sin inconveniente con error 400.
+CP_007;Check the service Delete Method;Automatizacion de Api;Automatizacion Prueba;1;Abrir Postman, elegir el metodo Post e Ingresar el Endpoint https://reqres.in/api/users/2;El usurario podra realizar las acciones sin inconveniente.
+;;;;2;Enviar la peticion mediante el boton Send y validar que el sistema responda con un codigo 204;La peticion debera responder el response en vacio.
+;;;;3;Mediante la aplicación Intellij generar un nuevo proyecto con el nombre de Automatizacion y en el campo built system seleccionar Maven.;El usuario podra crear el nuevo proyecto sin problema.
+;;;;4;Dar click en el boton crear para que Intellij genere el nuevo proyecto.;El sistema debera generar el nuevo proyecto sin inconveniente incluyendo las carpetas .idea, src y pom.
+;;;;5;En el pom adicionar las dependencias que se van a tener en el proyecto;El usuario adicionara las dependencias sin inconveniete.
+;;;;6;Eliminar la subcarpeta main ya que no se necesitara en el proyecto.;El usuario podra eliminar la carpeta sin inconveniente.
+;;;;7;Añadir un subpackage a la carpeta de Java con el nombre de Backend.;EL usuario podra crear el package sin inconveniente.
+;;;;8;En la carpeta de test dar click derecho y crear un nuevo directory de tipo resource.;El usuario podra crear el directorio sin problema.
+;;;;9;En la carpeta de resources dar click derecho, new directory y asignar el nombre de Backend.;El usuario pordra crear el directorio sin problema.
+;;;;10;Dentro de la carpeta de reousrces generar un archivo con el nombre de karate-config.js.;El usuario podra generar el archivo sin inconveniente.
+;;;;11;Dentro de la carpeta de resourrces generar un archivo con el nombre de karate-properties.json;El usuario podra generar el archivo sin inconveniente.
+;;;;12;Seleccionar el pom y despues del properties poner las dependencias del proyecto.;El usuario podra adicionar las dependencias sin onconveniente.
+;;;;13;Se realiza el cargue de las dependencias mediante la M de maven ubicada en la parte derecha y se le da en reload.;El sistema realizara el proceso de cargue de dependencias.
+;;;;14;Se realiza el proceso de descarga de sorurces y documentation ingresando nuevamente a la M de maven, seleccionar el icono de descarga dowload source el cual desplega 3 opciones, elegir la que dice dowload sources and documentation. ;El sistema debera descargar la informacion sin problema.
+;;;;15;Realizar creacion de la Feature con el nombre de user dando click derecho sobre la carpeta de Backend de Resources, new File.feature;El sistema permitira al usuario crear el archivo sin inconveniente.
+;;;;16;Se redacta la primera Fetarue indicando el escenario principal en este caso Feature: Service Users;El usuario redacta el User sin onconveneinte.
+;;;;17;Se detalla la HU As QA Automation  I want to consult a user - to validate the status code and response;El usuario detalla la HU sin inconveniente.
+;;;;18;Ingresar la precondicion del servicio mediante la sentencia Background: consume service.;El usuario podra adicionar la precondicion sin inconveniente.
+;;;;19;Definir variable mediante la sentencia *url (palabra reservada de Karate) y seguido indicamos la variable url;
+;;;;20;Realizar funcion en karate.config para que realice el llamado al karate-properties que es el jadon sonde estara toda la data.;El usuario podra realizar las acciones sin problema.
+;;;;21;Ingresar al User.feature y generar el escenario Check the service Get Method usando las palabras reservadas de Gherkin.Given path 'api', 'users', '2' When method deleteThen status 204;El usuario genera el escenario sin problema.
+;;;;22;En la carpeta Backend que esta debajo de la de  java dar click derecho y generar un nueva clase java con el nombre de user.;El sistema debe permitir crear la clase sin problema.
+;;;;23;"Dentro de la clase de Java realizar la siguiente configuracion: package Backend; import com.intuit.karate.junit5.Karate;import com.intuit.karate.junit5.Karate.Test;
+
+public class user {
+    @Test
+    Karate testSample(){
+        return Karate.run(""classpath:Backend/user.feature"").relativeTo(getClass());
+
+    }";El usuario podra configurar la clase sin inconveniente.
+;;;;24;Realilzar ejecucion de la feature dando click derecho sobre la clase java y eligiendo la opcion Run.;Se espera que el sistema no genere ningun tipo de error y se puede ver el caso automatizado.
+;;;;25;Ingresar a la carpeta target, identificar la seccion karate summary.html dar click derecho, open in y elegir browser google chrome.;El sistema redireccionara al usuario a Karate Labs y podra ver el caso automatizado sin inconveniente.
+CP_008;Check the service Delete Method Unsuccessful;Automatizacion de Api;Automatizacion Prueba;1;Abrir Postman, elegir el metodo Post e Ingresar el Endpoint https://reqres.in/api/users?page=2;El usurario podra realizar las acciones sin inconveniente.
+;;;;2;Enviar la peticion mediante el boton Send y validar que el sistema responda con un codigo 400;"La peticion debera responder con el siguiente Json{
+    ""page"": 2,
+    ""per_page"": 6,
+    ""total"": 12,
+    ""total_pages"": 2,
+    ""data"": [
+        {
+            ""id"": 7,
+            ""email"": ""michael.lawson@reqres.in"",
+            ""first_name"": ""Michael"",
+            ""last_name"": ""Lawson"",
+            ""avatar"": ""https://reqres.in/img/faces/7-image.jpg""
+        },
+        {
+            ""id"": 8,
+            ""email"": ""lindsay.ferguson@reqres.in"",
+            ""first_name"": ""Lindsay"",
+            ""last_name"": ""Ferguson"",
+            ""avatar"": ""https://reqres.in/img/faces/8-image.jpg""
+        },
+        {
+            ""id"": 9,
+            ""email"": ""tobias.funke@reqres.in"",
+            ""first_name"": ""Tobias"",
+            ""last_name"": ""Funke"",
+            ""avatar"": ""https://reqres.in/img/faces/9-image.jpg""
+        },
+        {
+            ""id"": 10,
+            ""email"": ""byron.fields@reqres.in"",
+            ""first_name"": ""Byron"",
+            ""last_name"": ""Fields"",
+            ""avatar"": ""https://reqres.in/img/faces/10-image.jpg""
+        },
+        {
+            ""id"": 11,
+            ""email"": ""george.edwards@reqres.in"",
+            ""first_name"": ""George"",
+            ""last_name"": ""Edwards"",
+            ""avatar"": ""https://reqres.in/img/faces/11-image.jpg""
+        },
+        {
+            ""id"": 12,
+            ""email"": ""rachel.howell@reqres.in"",
+            ""first_name"": ""Rachel"",
+            ""last_name"": ""Howell"",
+            ""avatar"": ""https://reqres.in/img/faces/12-image.jpg""
+        }
+    ],
+    ""support"": {
+        ""url"": ""https://reqres.in/#support-heading"",
+        ""text"": ""To keep ReqRes free, contributions towards server costs are appreciated!""
+    }
+}"
+;;;;4;Mediante la aplicación Intellij generar un nuevo proyecto con el nombre de Automatizacion y en el campo built system seleccionar Maven.;El usuario podra crear el nuevo proyecto sin problema.
+;;;;5;Dar click en el boton crear para que Intellij genere el nuevo proyecto.;El sistema debera generar el nuevo proyecto sin inconveniente incluyendo las carpetas .idea, src y pom.
+;;;;6;En el pom adicionar las dependencias que se van a tener en el proyecto;El usuario adicionara las dependencias sin inconveniete.
+;;;;7;Eliminar la subcarpeta main ya que no se necesitara en el proyecto.;El usuario podra eliminar la carpeta sin inconveniente.
+;;;;8;Añadir un subpackage a la carpeta de Java con el nombre de Backend.;EL usuario podra crear el package sin inconveniente.
+;;;;9;En la carpeta de test dar click derecho y crear un nuevo directory de tipo resource.;El usuario podra crear el directorio sin problema.
+;;;;10;En la carpeta de resources dar click derecho, new directory y asignar el nombre de Backend.;El usuario pordra crear el directorio sin problema.
+;;;;11;Dentro de la carpeta de reousrces generar un archivo con el nombre de karate-config.js.;El usuario podra generar el archivo sin inconveniente.
+;;;;12;Dentro de la carpeta de resourrces generar un archivo con el nombre de karate-properties.json;El usuario podra generar el archivo sin inconveniente.
+;;;;13;Seleccionar el pom y despues del properties poner las dependencias del proyecto.;El usuario podra adicionar las dependencias sin onconveniente.
+;;;;14;Se realiza el cargue de las dependencias mediante la M de maven ubicada en la parte derecha y se le da en reload.;El sistema realizara el proceso de cargue de dependencias.
+;;;;15;Se realiza el proceso de descarga de sorurces y documentation ingresando nuevamente a la M de maven, seleccionar el icono de descarga dowload source el cual desplega 3 opciones, elegir la que dice dowload sources and documentation. ;El sistema debera descargar la informacion sin problema.
+;;;;16;Realizar creacion de la Feature con el nombre de user dando click derecho sobre la carpeta de Backend de Resources, new File.feature;El sistema permitira al usuario crear el archivo sin inconveniente.
+;;;;17;Se redacta la primera Fetarue indicando el escenario principal en este caso Feature: Service Users;El usuario redacta el User sin onconveneinte.
+;;;;18;Se detalla la HU As QA Automation  I want to consult a user - to validate the status code and response;El usuario detalla la HU sin inconveniente.
+;;;;19;Ingresar la precondicion del servicio mediante la sentencia Background: consume service.;El usuario podra adicionar la precondicion sin inconveniente.
+;;;;20;Definir variable mediante la sentencia *url (palabra reservada de Karate) y seguido indicamos la variable url;
+;;;;21;Realizar funcion en karate.config para que realice el llamado al karate-properties que es el jadon sonde estara toda la data.;El usuario podra realizar las acciones sin problema.
+;;;;22;Ingresar al User.feature y generar el escenario Check the service Get Method usando las palabras reservadas de Gherkin.Given path 'api', 'users' When method deleteThen status 400;El usuario genera el escenario sin problema.
+;;;;23;En la carpeta Backend que esta debajo de la de  java dar click derecho y generar un nueva clase java con el nombre de user.;El sistema debe permitir crear la clase sin problema.
+;;;;24;"Dentro de la clase de Java realizar la siguiente configuracion: package Backend; import com.intuit.karate.junit5.Karate;import com.intuit.karate.junit5.Karate.Test;
+
+public class user {
+    @Test
+    Karate testSample(){
+        return Karate.run(""classpath:Backend/user.feature"").relativeTo(getClass());
+
+    }";El usuario podra configurar la clase sin inconveniente.
+;;;;25;Realilzar ejecucion de la feature dando click derecho sobre la clase java y eligiendo la opcion Run.;Se espera que el sistema genere error 400 ya que se le incluyo una validacion del enpoint errado.
+;;;;26;Ingresar a la carpeta target, identificar la seccion karate summary.html dar click derecho, open in y elegir browser google chrome.;El sistema redireccionara al usuario a Karate Labs y podra ver el caso automatizado sin inconveniente con error 400.

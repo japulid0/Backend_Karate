@@ -1,0 +1,53 @@
+Plan De Pruebas Ejercicio Automatización API
+
+Objetivo
+
+Automatizar las pruebas de la API con la finalidad de garantizar su correcta funcionalidad.
+
+Alcance
+
+El plan de pruebas cubrirá funcionalidades de la API especificas, incluyendo los métodos de solicitud en este caso Post, Get, Put y Delete,
+respuestas esperadas y manejo de errores.
+
+Etapas del plan:
+
+Análisis de requisitos:
+
+Revisión de la documentación https://reqres.in de la API para comprender los requisitos y funcionalidades.
+Identificación de los escenarios de prueba y casos de uso principales.
+
+Diseño de casos de prueba:
+
+Creación de casos de prueba basados en los requisitos y escenarios identificados.
+Inclusión de casos de prueba para validar los parámetros de entrada, respuestas esperadas y manejo de errores.
+
+Configuración del entorno de prueba:
+
+Preparación del entorno de pruebas con datos de prueba necesarios.
+Configuración de herramientas de automatización de pruebas y entornos de ejecución.
+
+Desarrollo de scripts de prueba:
+
+Escritura de scripts de prueba utilizando la herramienta de automatización seleccionada.
+Incorporación de assertions para validar las respuestas de la API.
+
+Ejecución de pruebas:
+
+Ejecución de scripts de prueba para validar la funcionalidad de la API.
+Registro de resultados de prueba y seguimiento de incidencias encontradas.
+
+Análisis de resultados:
+
+Revisión de los resultados de las pruebas automatizadas.
+Investigación y resolución de problemas encontrados.
+Actualización de los casos de prueba según sea necesario.
+
+Informe y presentación:
+
+Elaboración de un informe de pruebas que incluya los resultados de las pruebas, los problemas encontrados y las recomendaciones para su corrección.
+Presentación de los resultados a los interesados, incluyendo el equipo de desarrollo y gestión de proyectos.
+
+Mantenimiento:
+
+Mantenimiento regular de los scripts de prueba para asegurar su relevancia y eficacia.
+Actualización de los casos de prueba conforme evolucionen los requisitos y funcionalidades de la API.
