@@ -15,10 +15,12 @@ Método: POST
 Descripción: Crea un nuevo usuario.
 
 Cuerpo de la solicitud:
+
 {
     "name": "morpheus",
     "job": "leader"
 }
+
 
 Respuesta exitosa:
 
