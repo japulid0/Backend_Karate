@@ -113,7 +113,7 @@ Descripción: Actualiza un Usuario existente.
 
 Parámetros de la URL:
 
-id (número): El ID del recurso.
+id (número): El ID del Usuario.
 
     {
         "name": "morpheus",
@@ -127,3 +127,16 @@ Respuesta exitosa:
         "job": "zion resident",
         "updatedAt": "2024-05-22T16:41:17.260Z"
     }
+
+# Eliminar un recurso (DELETE)
+URL: https://reqres.in/api/users/2
+
+Método: DELETE
+
+Descripción: Elimina un recurso existente.
+
+Respuesta exitosa:
+
+204 NO content
+The server succesfullyprocessed the request,
+but is not returning any content.
