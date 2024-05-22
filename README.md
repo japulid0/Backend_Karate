@@ -16,20 +16,20 @@ Descripción: Crea un nuevo usuario.
 
 Cuerpo de la solicitud:
 
-{
-    "name": "morpheus",
-    "job": "leader"
-}
+    {
+        "name": "morpheus",
+        "job": "leader"
+    }
 
 
 Respuesta exitosa:
 
-{
-    "name": "morpheus",
-    "job": "leader",
-    "id": "919",
-    "createdAt": "2024-05-22T16:21:02.718Z"
-}
+    {
+        "name": "morpheus",
+        "job": "leader",
+        "id": "919",
+        "createdAt": "2024-05-22T16:21:02.718Z"
+    }
 
 # 2. Obtener Todos Los Usuarios (GET)
 
