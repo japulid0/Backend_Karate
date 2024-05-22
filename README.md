@@ -41,12 +41,12 @@ Descripción: Obtiene una lista de todos los Usuarios.
 
 Respuesta exitosa:
 
-{
-    "page": 2,
-    "per_page": 6,
-    "total": 12,
-    "total_pages": 2,
-    "data": [
+    {
+        "page": 2,
+        "per_page": 6,
+        "total": 12,
+        "total_pages": 2,
+        "data": [
 
             {
             "id": 7,
@@ -97,8 +97,8 @@ Respuesta exitosa:
         }
     ],
  
-"support": {
-        "url": "https://reqres.in/#support-heading",
-        "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
+            "support": {
+            "url": "https://reqres.in/#support-heading",
+            "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
     }
 }
