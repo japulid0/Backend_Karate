@@ -7,7 +7,7 @@ Este primer reto en el mundo de la automatización es una API que permite realiz
 - Postman 
 - Karate
 # Endpoints
-# 1. Crear un recurso (POST)
+# Crear un recurso (POST)
 URL: https://reqres.in/api/users
 
 Método: POST
@@ -31,7 +31,7 @@ Respuesta exitosa:
         "createdAt": "2024-05-22T16:21:02.718Z"
     }
 
-# 2. Obtener Todos Los Usuarios (GET)
+# Obtener Todos Los Usuarios (GET)
 
 URL: https://reqres.in/api/users?page=2
 
@@ -102,3 +102,28 @@ Respuesta exitosa:
             "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
     }
 }
+
+# Actualizar un recurso (PUT)
+
+URL: https://reqres.in/api/users/2
+
+Método: PUT
+
+Descripción: Actualiza un Usuario existente.
+
+Parámetros de la URL:
+
+id (número): El ID del recurso.
+
+    {
+        "name": "morpheus",
+        "job": "zion resident"
+    }
+    
+Respuesta exitosa:
+
+    {
+        "name": "morpheus",
+        "job": "zion resident",
+        "updatedAt": "2024-05-22T16:41:17.260Z"
+    }
