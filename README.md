@@ -39,7 +39,6 @@ Descripción: Obtiene una lista de todos los Usuarios.
 
 Respuesta exitosa:
 
-
 {
     "page": 2,
     "per_page": 6,
