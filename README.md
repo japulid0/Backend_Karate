@@ -52,6 +52,7 @@ Respuesta exitosa:
             "last_name": "Lawson",
             "avatar": "https://reqres.in/img/faces/7-image.jpg"
         },
+
         {
             "id": 8,
             "email": "lindsay.ferguson@reqres.in",
@@ -59,6 +60,7 @@ Respuesta exitosa:
             "last_name": "Ferguson",
             "avatar": "https://reqres.in/img/faces/8-image.jpg"
         },
+
         {
             "id": 9,
             "email": "tobias.funke@reqres.in",
@@ -66,6 +68,7 @@ Respuesta exitosa:
             "last_name": "Funke",
             "avatar": "https://reqres.in/img/faces/9-image.jpg"
         },
+
         {
             "id": 10,
             "email": "byron.fields@reqres.in",
@@ -73,6 +76,7 @@ Respuesta exitosa:
             "last_name": "Fields",
             "avatar": "https://reqres.in/img/faces/10-image.jpg"
         },
+
         {
             "id": 11,
             "email": "george.edwards@reqres.in",
@@ -80,6 +84,7 @@ Respuesta exitosa:
             "last_name": "Edwards",
             "avatar": "https://reqres.in/img/faces/11-image.jpg"
         },
+
         {
             "id": 12,
             "email": "rachel.howell@reqres.in",
@@ -88,7 +93,8 @@ Respuesta exitosa:
             "avatar": "https://reqres.in/img/faces/12-image.jpg"
         }
     ],
-    "support": {
+ 
+"support": {
         "url": "https://reqres.in/#support-heading",
         "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
     }
