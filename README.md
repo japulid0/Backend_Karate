@@ -1,21 +1,21 @@
 # backend_karate
-Proyecto De Automatizacion
-# Descripción
-Este primer reto en el mundo de la automatización es una API que permite realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) en una colección de recursos. En la API se trabajara con metodos POST, GET, PUT y DELETE para manejar los datos.
-Se utilizaron herramientas como Cucumber y Gherking.
-# Requisitos
+Automation Project
+# Description
+This first challenge in the world of automation is an API that allows to perform CRUD (Create, Read, Update and Delete) operations on a collection of resources. The API will work with POST, GET, PUT and DELETE methods to handle the data.
+Tools such as Cucumber and Gherking were used.
+# Requirements
 - IntelliJ IDEA
 - Postman 
 - Karate
 # Endpoints
-# Crear un recurso (POST)
+#Create a resource (POST)
 URL: https://reqres.in/api/users
 
-Método: POST
+Method: POST
 
-Descripción: Crea un nuevo usuario.
+Description: Create a new user.
 
-Cuerpo de la solicitud:
+Body of the application:
 
     {
         "name": "morpheus",
@@ -23,7 +23,7 @@ Cuerpo de la solicitud:
     }
 
 
-Respuesta exitosa:
+Successful response:
 
     {
         "name": "morpheus",
@@ -32,15 +32,15 @@ Respuesta exitosa:
         "createdAt": "2024-05-22T16:21:02.718Z"
     }
 
-# Obtener Todos Los Usuarios (GET)
+# Get All Users (GET)
 
 URL: https://reqres.in/api/users?page=2
 
-Método: GET
+Méthod: GET
 
-Descripción: Obtiene una lista de todos los Usuarios.
+Description: Gets a list of all Users.
 
-Respuesta exitosa:
+Successful response:
 
     {
         "page": 2,
@@ -104,24 +104,24 @@ Respuesta exitosa:
     }
 }
 
-# Actualizar un recurso (PUT)
+# Update a resource (PUT)
 
 URL: https://reqres.in/api/users/2
 
-Método: PUT
+Méthod: PUT
 
-Descripción: Actualiza un Usuario existente.
+Description: Actualiza un Usuario existente.
 
-Parámetros de la URL:
+URL parameters:
 
-id (número): El ID del Usuario.
+id (número): User ID.
 
     {
         "name": "morpheus",
         "job": "zion resident"
     }
     
-Respuesta exitosa:
+Successful response:
 
     {
         "name": "morpheus",
@@ -129,14 +129,14 @@ Respuesta exitosa:
         "updatedAt": "2024-05-22T16:41:17.260Z"
     }
 
-# Eliminar un recurso (DELETE)
+# Delete a resource (DELETE)
 URL: https://reqres.in/api/users/2
 
-Método: DELETE
+Method: DELETE
 
-Descripción: Elimina un recurso existente.
+Description: Deletes an existing resource.
 
-Respuesta exitosa:
+Successful response:
 
 204 NO content
 The server succesfullyprocessed the request,
