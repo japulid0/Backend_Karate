@@ -152,6 +152,8 @@ To generate the report we will have to compile the Project Report class where th
 
 The user will see the following report:
 
+to review the generated report open the evidence in the following path.
 
+https://github.com/japulid0/backend_karate/blob/Automation/Cucumber%20Report.png
 
 
